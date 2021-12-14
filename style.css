@@ -4206,6 +4206,7 @@ body {
   cursor: pointer;
   transition: 120ms;
   pointer-events: all;
+  font-family: "Vazir", sans-serif !important;
 }
 .key .row label:hover {
   opacity: 1 !important;
