@@ -68,6 +68,7 @@ body {
   left: 0;
   top: 0;
   padding: 2px;
+  font-family: "Vazir FD", sans-serif !important;
 }
 .element .label {
   text-align: center;
@@ -75,6 +76,7 @@ body {
 }
 .element .symbol {
   font-size: 1.7vw;
+  font-family: "Roboto Mono", sans-serif !important;
 }
 .element .name {
   font-size: 0.7vw;
@@ -87,6 +89,7 @@ body {
   bottom: 0;
   padding: 2px;
   text-align: center;
+  font-family: "Vazir FD", sans-serif !important;
 }
 .element .atomic-weight {
   position: absolute;
@@ -98,6 +101,7 @@ body {
   opacity: 0;
   transition: 200ms;
   text-align: right;
+  font-family: "Vazir FD", sans-serif !important;
 }
 .element .model {
   display: none;
@@ -3932,6 +3936,7 @@ body {
   transition: 500ms;
 }
 .placeholder .square {
+  font-family: "Vazir FD", sans-serif !important;
   position: absolute;
   left: 0;
   top: 0;
