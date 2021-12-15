@@ -1,4 +1,4 @@
-# Periodic Table
+# <img src="logo.png" width="28px"/> Periodic Table
 
 Periodic Table of Elements in Persian language
 
