@@ -68,7 +68,7 @@ body {
   left: 0;
   top: 0;
   padding: 2px;
-  font-family: "Vazir FD", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
 }
 .element .label {
   text-align: center;
@@ -80,7 +80,7 @@ body {
 }
 .element .name {
   font-size: 0.7vw;
-  font-family: "Vazir", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
 }
 .element .atomic-mass {
   position: absolute;
@@ -89,7 +89,7 @@ body {
   bottom: 0;
   padding: 2px;
   text-align: center;
-  font-family: "Vazir FD", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
 }
 .element .atomic-weight {
   position: absolute;
@@ -101,7 +101,7 @@ body {
   opacity: 0;
   transition: 200ms;
   text-align: right;
-  font-family: "Vazir FD", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
 }
 .element .model {
   display: none;
@@ -3936,7 +3936,7 @@ body {
   transition: 500ms;
 }
 .placeholder .square {
-  font-family: "Vazir FD", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
   position: absolute;
   left: 0;
   top: 0;
@@ -4211,7 +4211,7 @@ body {
   cursor: pointer;
   transition: 120ms;
   pointer-events: all;
-  font-family: "Vazir", sans-serif !important;
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
 }
 .key .row label:hover {
   opacity: 1 !important;
