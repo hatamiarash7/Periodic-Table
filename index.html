@@ -69,30 +69,11 @@
       crossorigin
     />
     <link rel="stylesheet" href="./style.css" />
-    <script>
-      var _paq = (window._paq = window._paq || []);
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "https://matomo.arash-hatami.ir/";
-        _paq.push(["setTrackerUrl", u + "matomo.php"]);
-        _paq.push(["setSiteId", "10"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src = u + "matomo.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-    <noscript
-      ><p>
-        <img
-          src="https://matomo.arash-hatami.ir/matomo.php?idsite=10&amp;rec=1"
-          style="border: 0"
-          alt=""
-        /></p
-    ></noscript>
+    <script
+      defer
+      data-domain="periodic.arash-hatami.ir"
+      src="https://analytics.arash-hatami.ir/js/plausible.js"
+    ></script>
     <meta
       name="google-site-verification"
       content="QZFeekX0NGg0RnQwiS-uqhMIdMgQ9KSX3AEJdm6wTJ8"
