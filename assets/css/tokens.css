@@ -1,0 +1,115 @@
+/* Design tokens: colours, spacing, typography. Dark is the default. */
+:root {
+  color-scheme: dark;
+
+  --font: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+
+  --bg: #0d1117;
+  --bg-glow: rgb(88 101 242 / 0.14);
+  --surface: #151b24;
+  --surface-2: #1c2430;
+  --border: #2a3441;
+  --text: #e8edf4;
+  --text-muted: #94a1b3;
+  --accent: #7c8cff;
+  --shadow: 0 18px 50px rgb(0 0 0 / 0.55);
+
+  /* Category colours */
+  --alkali-metal: #f2c14e;
+  --alkaline-earth-metal: #d9e85a;
+  --lanthanoid: #f27aa7;
+  --actinoid: #c98bd6;
+  --transition-metal: #ff8a73;
+  --post-transition-metal: #4fd8f0;
+  --metalloid: #3feeb8;
+  --other-nonmetal: #5aee6a;
+  --noble-gas: #7aa2ff;
+  --unknown: #b8c0cc;
+
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --gap: 0.3rem;
+}
+
+/* Explicit light choice, or OS preference when the user has not chosen. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6fa;
+  --bg-glow: rgb(88 101 242 / 0.1);
+  --surface: #ffffff;
+  --surface-2: #eef1f6;
+  --border: #d5dbe5;
+  --text: #17202e;
+  --text-muted: #5a6779;
+  --accent: #4452e0;
+  --shadow: 0 18px 50px rgb(30 40 70 / 0.22);
+
+  --alkali-metal: #b07a00;
+  --alkaline-earth-metal: #7d8a00;
+  --lanthanoid: #c4336d;
+  --actinoid: #93399f;
+  --transition-metal: #d2472b;
+  --post-transition-metal: #007e96;
+  --metalloid: #00946b;
+  --other-nonmetal: #1c8a2b;
+  --noble-gas: #3354d6;
+  --unknown: #5f6b7a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #f4f6fa;
+    --bg-glow: rgb(88 101 242 / 0.1);
+    --surface: #ffffff;
+    --surface-2: #eef1f6;
+    --border: #d5dbe5;
+    --text: #17202e;
+    --text-muted: #5a6779;
+    --accent: #4452e0;
+    --shadow: 0 18px 50px rgb(30 40 70 / 0.22);
+
+    --alkali-metal: #b07a00;
+    --alkaline-earth-metal: #7d8a00;
+    --lanthanoid: #c4336d;
+    --actinoid: #93399f;
+    --transition-metal: #d2472b;
+    --post-transition-metal: #007e96;
+    --metalloid: #00946b;
+    --other-nonmetal: #1c8a2b;
+    --noble-gas: #3354d6;
+    --unknown: #5f6b7a;
+  }
+}
+
+/* Maps `data-category` to the `--c` variable used by components. */
+[data-category="alkali-metal"] {
+  --c: var(--alkali-metal);
+}
+[data-category="alkaline-earth-metal"] {
+  --c: var(--alkaline-earth-metal);
+}
+[data-category="lanthanoid"] {
+  --c: var(--lanthanoid);
+}
+[data-category="actinoid"] {
+  --c: var(--actinoid);
+}
+[data-category="transition-metal"] {
+  --c: var(--transition-metal);
+}
+[data-category="post-transition-metal"] {
+  --c: var(--post-transition-metal);
+}
+[data-category="metalloid"] {
+  --c: var(--metalloid);
+}
+[data-category="other-nonmetal"] {
+  --c: var(--other-nonmetal);
+}
+[data-category="noble-gas"] {
+  --c: var(--noble-gas);
+}
+[data-category="unknown"] {
+  --c: var(--unknown);
+}

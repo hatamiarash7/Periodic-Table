@@ -1,0 +1,223 @@
+/* Element detail dialog */
+
+.detail-dialog {
+  width: min(44rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--c) 50%, var(--border));
+  border-radius: 1.25rem;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  overflow: auto;
+}
+.detail-dialog[open] {
+  animation: dialog-in 220ms ease-out;
+}
+.detail-dialog::backdrop {
+  background: rgb(5 8 14 / 0.6);
+  backdrop-filter: blur(6px);
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.97);
+  }
+}
+
+.detail {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: radial-gradient(
+    30rem 14rem at 100% 0%,
+    color-mix(in srgb, var(--c) 16%, transparent),
+    transparent
+  );
+}
+.detail__close {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 0.9rem;
+}
+
+.detail__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline-start: 2.5rem;
+}
+.detail__tile {
+  flex: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 7rem;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--c);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--c) 14%, var(--surface));
+  line-height: 1.1;
+  direction: ltr;
+}
+.detail__number,
+.detail__mass {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.detail__number {
+  justify-self: start;
+}
+.detail__symbol {
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--c);
+}
+.detail__titles {
+  display: grid;
+  gap: 0.25rem;
+  justify-items: start;
+}
+.detail__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.detail__subtitle {
+  color: var(--text-muted);
+}
+.tag {
+  margin-top: 0.25rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+}
+
+.detail__content {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.detail__model {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+/* Bohr model */
+.bohr {
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 1;
+}
+.bohr__nucleus {
+  fill: var(--c);
+  filter: drop-shadow(0 0 6px var(--c));
+}
+.bohr__ring {
+  fill: none;
+  stroke: var(--c);
+  stroke-opacity: 0.3;
+  stroke-width: 0.8;
+}
+.bohr__electron {
+  fill: var(--text);
+  stroke: var(--c);
+  stroke-width: 1;
+}
+.bohr__orbit {
+  transform-box: view-box;
+  transform-origin: 100px 100px;
+  animation: orbit linear infinite;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  direction: ltr;
+}
+.shells li {
+  display: inline-flex;
+  gap: 0.35rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-size: 0.78rem;
+}
+.shells__name {
+  color: var(--c);
+  font-weight: 700;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.facts dt,
+.facts dd {
+  margin: 0;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.facts dt {
+  color: var(--text-muted);
+  background: var(--surface-2);
+}
+.facts dd {
+  font-weight: 600;
+}
+.facts dt:nth-last-of-type(1),
+.facts dd:last-of-type {
+  border-bottom: 0;
+}
+
+.detail__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (max-width: 36rem) {
+  .detail {
+    padding: 1rem;
+  }
+  .detail__header {
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 0;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  .detail__titles {
+    justify-items: center;
+  }
+  .detail__content {
+    grid-template-columns: 1fr;
+  }
+}
